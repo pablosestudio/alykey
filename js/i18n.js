@@ -80,6 +80,19 @@
     "Property Care in Alicante & Costa Blanca | ALYKEY":"Догляд за нерухомістю в Аліканте й на Коста-Бланці | ALYKEY","Property Management & Maintenance in Alicante | ALYKEY":"Управління нерухомістю та обслуговування в Аліканте | ALYKEY","Property Inspection in Alicante | ALYKEY":"Перевірка нерухомості в Аліканте | ALYKEY","About ALYKEY | Property Care in Alicante & Costa Blanca":"Про ALYKEY | Догляд за нерухомістю в Аліканте","Contact ALYKEY | Property Services in Alicante":"Контакти ALYKEY | Послуги з нерухомості в Аліканте"
   });
 
+  Object.assign(dictionaries.es, {
+    "Property Management & Concierge":"Gestión inmobiliaria y conserjería","We coordinate trusted professionals.":"Coordinamos profesionales de confianza.",
+    "We coordinate the visit or service.":"Coordinamos la visita o el servicio.","Property Care & Concierge":"Cuidado de viviendas y conserjería","Personal":"Atención personal"
+  });
+  Object.assign(dictionaries.fr, {
+    "Property Management & Concierge":"Gestion immobilière et conciergerie","We coordinate trusted professionals.":"Nous coordonnons des professionnels de confiance.",
+    "We coordinate the visit or service.":"Nous coordonnons la visite ou le service.","Property Care & Concierge":"Entretien immobilier et conciergerie","Personal":"Suivi personnalisé"
+  });
+  Object.assign(dictionaries.uk, {
+    "Property Management & Concierge":"Управління нерухомістю та консьєрж-сервіс","We coordinate trusted professionals.":"Ми залучаємо перевірених фахівців.",
+    "We coordinate the visit or service.":"Ми узгодимо візит або послугу.","Property Care & Concierge":"Догляд за нерухомістю та консьєрж-сервіс","Personal":"Особистий підхід"
+  });
+
   var metadata = {
     es: {
       "Property services, home watch, maintenance coordination and concierge for international homeowners in Alicante and the Costa Blanca.": "Cuidado de viviendas, coordinación de mantenimiento y conserjería para propietarios internacionales en Alicante y la Costa Blanca.",
