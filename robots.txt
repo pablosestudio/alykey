@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alykey.com/sitemap.xml
+Sitemap: https://pablosestudio.github.io/alykey/sitemap.xml

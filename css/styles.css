@@ -114,10 +114,11 @@ button { font: inherit; }
   text-decoration: none;
   color: var(--ink);
   display: inline-flex;
-  align-items: baseline;
-  gap: 2px;
+  align-items: center;
+  gap: 0.5rem;
 }
-.logo span { color: var(--ochre); }
+.brand-mark { width: 2rem; height: 2rem; flex: 0 0 auto; }
+.logo-word { color: var(--ink); }
 
 .nav-primary {
   display: none;
