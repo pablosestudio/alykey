@@ -143,6 +143,74 @@
   Object.keys(dictionaries.es).forEach(function (key) { english[key] = key; });
   dictionaries.en = english;
 
+  var serviceTranslations = { es: {}, fr: {}, uk: {} };
+  [
+    ["/ month", "/ mes", "/ mois", "/ місяць"],
+    ["Ask about Essential", "Preguntar por Essential", "Demander le forfait Essential", "Запитати про Essential"],
+    ["Ask about Plus", "Preguntar por Plus", "Demander le forfait Plus", "Запитати про Plus"],
+    ["Ask about Weekly", "Preguntar por Weekly", "Demander le forfait Weekly", "Запитати про Weekly"],
+    ["ONE-OFF SERVICE", "SERVICIO PUNTUAL", "VISITE PONCTUELLE", "РАЗОВА ПОСЛУГА"],
+    ["CLEAR PRICING", "PRECIOS CLAROS", "TARIFS CLAIRS", "ЗРОЗУМІЛІ ЦІНИ"],
+    ["See the full checklist", "Ver la lista completa", "Voir la liste complète", "Переглянути повний перелік"],
+    ["Request a quote", "Solicitar presupuesto", "Demander un devis", "Запросити кошторис"],
+    ["Tell us what you need", "Cuéntanos qué necesitas", "Dites-nous ce dont vous avez besoin", "Розкажіть, що вам потрібно"],
+    ["Property care plans and prices in Alicante.", "Planes y precios de cuidado de viviendas en Alicante.", "Forfaits et tarifs de suivi immobilier à Alicante.", "Плани та ціни на догляд за нерухомістю в Аліканте."],
+    ["Choose a one-off home check, regular visits while you're away, or practical help when your property needs attention. We confirm the scope and total price before any work begins.", "Elige una revisión puntual, visitas periódicas mientras estás fuera o ayuda práctica cuando tu vivienda lo necesite. Confirmamos el alcance y el precio total antes de empezar.", "Choisissez une visite ponctuelle, des visites régulières pendant votre absence ou une aide pratique lorsque votre logement en a besoin. Nous confirmons le périmètre et le prix total avant toute intervention.", "Оберіть разовий огляд, регулярні візити, поки вас немає, або практичну допомогу. Ми підтвердимо обсяг і повну ціну до початку робіт."],
+    ["Regular property care", "Cuidado periódico de la vivienda", "Suivi régulier du logement", "Регулярний догляд за нерухомістю"],
+    ["Scheduled visits, visual checks and a clear photo update after every visit, while you're away.", "Visitas programadas, revisiones visuales e información fotográfica clara después de cada visita.", "Des visites planifiées, des contrôles visuels et un compte rendu photo après chaque visite.", "Заплановані візити, візуальні перевірки та фотозвіт після кожного візиту."],
+    ["One scheduled visit each month, up to 30 minutes.", "Una visita programada al mes, de hasta 30 minutos.", "Une visite planifiée par mois, jusqu'à 30 minutes.", "Один запланований візит на місяць до 30 хвилин."],
+    ["Two scheduled visits each month, up to 30 minutes per visit.", "Dos visitas programadas al mes, de hasta 30 minutos cada una.", "Deux visites planifiées par mois, jusqu'à 30 minutes chacune.", "Два заплановані візити на місяць до 30 хвилин кожен."],
+    ["Four scheduled visits per month, up to 30 minutes per visit.", "Cuatro visitas programadas al mes, de hasta 30 minutos cada una.", "Quatre visites planifiées par mois, jusqu'à 30 minutes chacune.", "Чотири заплановані візити на місяць до 30 хвилин кожен."],
+    ["Visual check of doors, windows and the general condition", "Revisión visual de puertas, ventanas y estado general", "Contrôle visuel des portes, fenêtres et de l'état général", "Візуальна перевірка дверей, вікон і загального стану"],
+    ["Look for visible signs of leaks or damp", "Búsqueda de señales visibles de fugas o humedad", "Recherche de signes visibles de fuite ou d'humidité", "Перевірка на видимі ознаки протікання або вологи"],
+    ["Ventilation where authorised and safe", "Ventilación cuando esté autorizada y sea segura", "Aération lorsque cela est autorisé et sans risque", "Провітрювання, якщо це дозволено та безпечно"],
+    ["Up to 10 photos and a written update within 24 hours", "Hasta 10 fotos y un resumen por escrito en 24 horas", "Jusqu'à 10 photos et un compte rendu écrit sous 24 heures", "До 10 фото та письмове повідомлення протягом 24 годин"],
+    ["Keyholding for one authorised set of keys", "Custodia de un juego de llaves autorizado", "Conservation d'un jeu de clés autorisé", "Зберігання одного уповноваженого комплекту ключів"],
+    ["Everything included in Essential", "Todo lo incluido en Essential", "Tout ce qui est inclus dans Essential", "Усе, що входить до Essential"],
+    ["Two check-ins to spot visible issues sooner", "Dos revisiones para detectar antes posibles problemas visibles", "Deux passages pour repérer plus tôt les problèmes visibles", "Два огляди, щоб раніше помічати видимі проблеми"],
+    ["Up to 10 photos and a written update after each visit", "Hasta 10 fotos y un resumen por escrito después de cada visita", "Jusqu'à 10 photos et un compte rendu écrit après chaque visite", "До 10 фото та письмовий звіт після кожного візиту"],
+    ["Weekly visual check-ins", "Revisiones visuales semanales", "Contrôles visuels hebdomadaires", "Щотижневі візуальні огляди"],
+    ["Visits are visual checks, not technical surveys or a guarantee that hidden faults will be detected. The plans are priced for properties in Alicante city. We confirm availability and any travel charge for other areas before booking.", "Las visitas son revisiones visuales; no son inspecciones técnicas ni garantizan la detección de defectos ocultos. Estos precios corresponden a viviendas en Alicante ciudad. Confirmamos disponibilidad y cualquier desplazamiento a otras zonas antes de reservar.", "Les visites sont des contrôles visuels, et non des expertises techniques ; elles ne garantissent pas la détection de défauts cachés. Ces tarifs concernent les logements dans la ville d'Alicante. Nous confirmons la disponibilité et les frais de déplacement hors zone avant réservation.", "Візити — це візуальні огляди, а не технічна експертиза; вони не гарантують виявлення прихованих несправностей. Ці тарифи діють для житла в місті Аліканте. Доступність і вартість виїзду за межі міста узгоджуємо до бронювання."],
+    ["A single property check", "Una inspección puntual de la vivienda", "Une visite ponctuelle du logement", "Разова перевірка нерухомості"],
+    ["A useful first step if you don't need monthly visits.", "Una buena primera opción si no necesitas visitas mensuales.", "Une bonne première étape si vous n'avez pas besoin de visites mensuelles.", "Зручний перший крок, якщо щомісячні візити вам не потрібні."],
+    ["One visit of up to 45 minutes", "Una visita de hasta 45 minutos", "Une visite de 45 minutes maximum", "Один візит тривалістю до 45 хвилин"],
+    ["Visual checklist covering doors, windows and visible signs of leaks or damp", "Lista visual de puertas, ventanas y señales visibles de fugas o humedad", "Liste de contrôle visuelle des portes, fenêtres et signes visibles de fuite ou d'humidité", "Візуальний перелік: двері, вікна та видимі ознаки протікання або вологи"],
+    ["Up to 15 photos and a written report within 48 hours", "Hasta 15 fotos e informe escrito en un plazo de 48 horas", "Jusqu'à 15 photos et un rapport écrit sous 48 heures", "До 15 фото та письмовий звіт протягом 48 годин"],
+    ["Optional short video included in the video version", "Vídeo breve opcional incluido en la versión con vídeo", "Une courte vidéo en option dans la formule avec vidéo", "Коротке відео входить до версії з відео"],
+    ["A visual check is not a survey, expert diagnosis or substitute for a qualified tradesperson.", "La revisión visual no es una inspección técnica, un diagnóstico profesional ni sustituye a un técnico cualificado.", "Le contrôle visuel ne constitue ni une expertise, ni un diagnostic professionnel, ni un remplacement d'un artisan qualifié.", "Візуальна перевірка не є технічною експертизою чи професійною діагностикою і не замінює кваліфікованого фахівця."],
+    ["From €", "Desde €", "À partir de €", "Від €"],
+    ["/ one-off", "/ una sola vez", "/ visite ponctuelle", "/ разово"],
+    ["A single visit and report. With a short video, €", "Una visita e informe. Con vídeo breve, €", "Une visite et un rapport. Avec une courte vidéo, €", "Один візит і звіт. Із коротким відео — €"],
+    [" total.", " en total.", " au total.", " загалом."],
+    ["Maintenance and repairs", "Mantenimiento y reparaciones", "Maintenance et réparations", "Обслуговування та ремонт"],
+    ["We arrange access and coordinate independent local professionals when work is needed at your property.", "Organizamos el acceso y coordinamos a profesionales locales independientes cuando tu vivienda necesita una intervención.", "Nous organisons l'accès et coordonnons des professionnels locaux indépendants lorsque votre logement nécessite une intervention.", "Ми організовуємо доступ і координуємо незалежних місцевих фахівців, коли нерухомості потрібні роботи."],
+    ["Plumbing, electrical and air-conditioning professionals", "Profesionales de fontanería, electricidad y aire acondicionado", "Plombiers, électriciens et techniciens en climatisation", "Фахівці із сантехніки, електрики та кондиціонування"],
+    ["Cleaning, gardening and pool-care providers", "Servicios de limpieza, jardinería y cuidado de piscinas", "Prestataires de nettoyage, jardinage et entretien de piscine", "Послуги з прибирання, садівництва та догляду за басейном"],
+    ["Repair and maintenance appointments", "Citas para reparaciones y mantenimiento", "Rendez-vous de réparation et de maintenance", "Організація ремонтних робіт і технічного обслуговування"],
+    ["Access for a booked professional: €", "Apertura para un profesional concertado: €", "Accès pour un professionnel sur rendez-vous : €", "Доступ для запрошеного фахівця: €"],
+    [" for up to 60 minutes", " hasta 60 minutos", " jusqu'à 60 minutes", " до 60 хвилин"],
+    ["We agree any coordination fee and the professional's quote with you first", "Acordamos contigo previamente el coste de coordinación y el presupuesto del profesional", "Nous convenons d'abord avec vous des frais de coordination et du devis du professionnel", "Ми заздалегідь узгоджуємо з вами вартість координації та кошторис фахівця"],
+    ["Specialist work is carried out by independent professionals, not ALYKEY. Their labour and materials are separate from the access fee. We won't book chargeable work without your approval.", "Los trabajos especializados los realizan profesionales independientes, no ALYKEY. Su mano de obra y materiales se cobran aparte de la apertura. No encargamos trabajos con coste sin tu aprobación.", "Les travaux spécialisés sont réalisés par des professionnels indépendants, et non par ALYKEY. Leur main-d'œuvre et leurs matériaux s'ajoutent aux frais d'accès. Nous ne commandons aucun travail payant sans votre accord.", "Спеціалізовані роботи виконують незалежні фахівці, а не ALYKEY. Їхня робота та матеріали оплачуються окремо від послуги доступу. Без вашого дозволу ми не замовляємо платні роботи."],
+    ["Practical help for your property", "Ayuda práctica para tu vivienda", "Une aide pratique pour votre logement", "Практична допомога з нерухомістю"],
+    ["Tell us what needs organising before you arrive or while you're away.", "Cuéntanos qué necesitas organizar antes de llegar o mientras estás fuera.", "Dites-nous ce qu'il faut organiser avant votre arrivée ou pendant votre absence.", "Розкажіть, що потрібно організувати до вашого приїзду або поки вас немає."],
+    ["Prepare the property before your arrival", "Preparar la vivienda antes de tu llegada", "Préparer le logement avant votre arrivée", "Підготувати житло до вашого приїзду"],
+    ["Receive a delivery or meet a booked professional", "Recibir una entrega o atender a un profesional concertado", "Réceptionner une livraison ou accueillir un professionnel sur rendez-vous", "Прийняти доставку або зустріти запрошеного фахівця"],
+    ["Collect keys or arrange an authorised handover", "Recoger llaves u organizar una entrega autorizada", "Récupérer des clés ou organiser leur remise à une personne autorisée", "Забрати ключі або організувати їх передачу уповноваженій особі"],
+    ["Carry out agreed local errands or shopping", "Hacer recados o compras locales previamente acordados", "Effectuer des courses ou achats locaux convenus à l'avance", "Виконати узгоджені місцеві доручення або покупки"],
+    ["Concierge assistance: €", "Asistencia de conserjería: €", "Assistance conciergerie : €", "Послуги консьєржа: €"],
+    [" per hour, one-hour minimum. Purchases and third-party services are charged separately, with your approval in advance.", " por hora, mínimo una hora. Las compras y los servicios de terceros se cobran aparte, previa aprobación.", " par heure, minimum une heure. Les achats et services tiers sont facturés séparément, après votre accord.", " за годину, мінімум одна година. Покупки та послуги сторонніх постачальників оплачуються окремо за попереднім погодженням."],
+    ["No unexpected work or charges", "Sin trabajos ni cargos inesperados", "Aucun travail ni frais imprévus", "Жодних неочікуваних робіт або платежів"],
+    ["The prices shown are indicative totals, including applicable taxes, for standard properties in Alicante city. Before booking, we'll confirm the service, availability, any travel charge and the final total in writing. You approve every extra before we arrange it.", "Los precios indicados son importes totales orientativos, con los impuestos aplicables, para viviendas estándar en Alicante ciudad. Antes de reservar, confirmaremos por escrito el servicio, la disponibilidad, cualquier desplazamiento y el precio final. Aprobarás cada extra antes de que lo organicemos.", "Les tarifs affichés sont des montants totaux indicatifs, taxes applicables comprises, pour des logements standards dans la ville d'Alicante. Avant toute réservation, nous confirmerons par écrit le service, la disponibilité, les frais de déplacement éventuels et le prix final. Vous approuvez chaque supplément avant son organisation.", "Указані орієнтовні ціни є повною сумою з урахуванням застосовних податків для стандартного житла в місті Аліканте. До бронювання ми письмово підтвердимо послугу, доступність, можливу плату за виїзд і остаточну вартість. Кожну додаткову послугу узгоджуємо до її замовлення."],
+    ["Property care plans & prices in Alicante | ALYKEY", "Planes y precios de cuidado de viviendas en Alicante | ALYKEY", "Forfaits et tarifs de suivi immobilier à Alicante | ALYKEY", "Плани та ціни на догляд за нерухомістю в Аліканте | ALYKEY"],
+    ["Explore ALYKEY property care plans in Alicante: monthly home checks, photo reports, keyholding, maintenance coordination and concierge. Clear prices and scope.", "Descubre los planes de ALYKEY en Alicante: revisiones mensuales, informes fotográficos, custodia de llaves, mantenimiento y conserjería, con alcance y precios claros.", "Découvrez les forfaits ALYKEY à Alicante : visites mensuelles, rapports photo, gestion des clés, maintenance et conciergerie, avec tarifs et prestations clairs.", "Ознайомтеся з планами ALYKEY в Аліканте: щомісячні огляди, фотозвіти, зберігання ключів, координація обслуговування та консьєрж-сервіс із чіткими цінами й умовами."],
+    ["One visit of up to 45 minutes, a visual checklist, up to 15 photos and a written report within 48 hours. A short video is available for €", "Una visita de hasta 45 minutos, una lista de revisión visual, hasta 15 fotos e informe escrito en 48 horas. Vídeo breve disponible por €", "Une visite de 45 minutes maximum, une liste de contrôle visuelle, jusqu'à 15 photos et un rapport écrit sous 48 heures. Courte vidéo disponible pour €", "Один візит до 45 хвилин, візуальний перелік перевірок, до 15 фото та письмовий звіт протягом 48 годин. Коротке відео доступне за €"],
+    ["Indicative total price, including applicable taxes, for a standard property in Alicante city. We confirm the scope, any travel charge and the final total before booking.", "Precio total orientativo, con los impuestos aplicables, para una vivienda estándar en Alicante ciudad. Confirmamos el alcance, cualquier desplazamiento y el precio final antes de reservar.", "Prix total indicatif, taxes applicables comprises, pour un logement standard dans la ville d'Alicante. Nous confirmons le périmètre, les éventuels frais de déplacement et le prix final avant réservation.", "Орієнтовна повна ціна з урахуванням застосовних податків для стандартного житла в місті Аліканте. До бронювання ми підтвердимо обсяг послуги, можливу плату за виїзд і остаточну вартість."],
+  ].forEach(function (row) {
+    serviceTranslations.es[row[0]] = row[1];
+    serviceTranslations.fr[row[0]] = row[2];
+    serviceTranslations.uk[row[0]] = row[3];
+  });
+
   function setLanguage(language) {
     if (!dictionaries[language]) language = "en";
     document.documentElement.lang = language;
@@ -153,7 +221,7 @@
       if (node.__alykeySource === undefined) node.__alykeySource = node.nodeValue;
       var source = node.__alykeySource.trim();
       if (!source) continue;
-      var translated = dictionary[source];
+      var translated = dictionary[source] || (serviceTranslations[language] && serviceTranslations[language][source]);
       node.nodeValue = node.__alykeySource.replace(source, translated || source);
     }
     document.querySelectorAll("[data-language]").forEach(function (button) {
@@ -173,11 +241,11 @@
     var title = document.querySelector("title");
     if (title) {
       if (!title.dataset.i18nSource) title.dataset.i18nSource = title.textContent;
-      title.textContent = dictionary[title.dataset.i18nSource] || title.dataset.i18nSource;
+      title.textContent = dictionary[title.dataset.i18nSource] || (serviceTranslations[language] && serviceTranslations[language][title.dataset.i18nSource]) || title.dataset.i18nSource;
     }
     document.querySelectorAll('meta[name="description"]').forEach(function (meta) {
       if (!meta.dataset.i18nSource) meta.dataset.i18nSource = meta.content;
-      meta.content = (metadata[language] && metadata[language][meta.dataset.i18nSource]) || meta.dataset.i18nSource;
+      meta.content = (metadata[language] && metadata[language][meta.dataset.i18nSource]) || (serviceTranslations[language] && serviceTranslations[language][meta.dataset.i18nSource]) || meta.dataset.i18nSource;
     });
     var ogTitle = document.querySelector('meta[property="og:title"]');
     if (ogTitle && title) ogTitle.content = title.textContent;

@@ -382,6 +382,7 @@ button { font: inherit; }
 /* ---- Pricing cards ------------------------------------------------------ */
 
 .price-grid { display: grid; gap: var(--space-3); grid-template-columns: 1fr; margin-top: var(--space-4); }
+.price-grid--plans { grid-template-columns: 1fr; }
 .price-card {
   background: var(--panel);
   border: 1px solid var(--line);
@@ -398,6 +399,7 @@ button { font: inherit; }
 
 @media (min-width: 900px) {
   .price-grid { grid-template-columns: repeat(4, 1fr); }
+  .price-grid--plans { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* ---- Property check checklist ------------------------------------------- */

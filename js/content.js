@@ -13,11 +13,13 @@ window.siteConfig = {
   whatsappMessage: "Hi, I'd like to know more about ALYKEY property services.",
 
   prices: {
-    propertyCheck: "49",
-    propertyCheckVideo: "69",
-    basic: "45",
-    care: "79",
-    concierge: "129"
+    propertyCheck: "43",
+    propertyCheckVideo: "48",
+    basic: "59",
+    care: "109",
+    weekly: "219",
+    access: "30",
+    concierge: "35"
   },
 
   company: {
