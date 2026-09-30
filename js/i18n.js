@@ -160,6 +160,8 @@
 
   var serviceTranslations = { es: {}, fr: {}, uk: {} };
   [
+    ["Care for a second home in Alicante →", "Cuidado de una segunda residencia en Alicante →", "Entretien d'une résidence secondaire à Alicante →", "Догляд за другим житлом в Аліканте →"],
+    ["See how ALYKEY helps care for a second home in Alicante →", "Descubre cómo ALYKEY cuida de tu segunda residencia en Alicante →", "Découvrez comment ALYKEY prend soin de votre résidence secondaire à Alicante →", "Дізнайтеся, як ALYKEY дбає про ваше друге житло в Аліканте →"],
     ["Property Care & Concierge", "Cuidado de viviendas y conserjería", "Entretien de logements et conciergerie", "Догляд за нерухомістю та консьєрж-сервіс"],
     ["Property care, home checks and concierge for international homeowners in Alicante and the Costa Blanca.", "Cuidado de viviendas, inspecciones y conserjería para propietarios internacionales en Alicante y la Costa Blanca.", "Entretien de logements, visites de contrôle et conciergerie pour les propriétaires internationaux à Alicante et sur la Costa Blanca.", "Догляд за нерухомістю, огляди житла та консьєрж-сервіс для іноземних власників в Аліканте й на узбережжі Коста-Бланка."],
     ["/ month", "/ mes", "/ mois", "/ місяць"],
@@ -246,6 +248,15 @@
       var active = button.dataset.language === language;
       if (active) button.setAttribute("aria-current", "true");
       else button.removeAttribute("aria-current");
+    });
+    var secondHomeUrls = {
+      en: "property-care-second-homes-alicante.html",
+      es: "cuidado-segunda-residencia-alicante.html",
+      fr: "entretien-residence-secondaire-alicante.html",
+      uk: "dohliad-za-druhym-zhytlom-alicante.html"
+    };
+    document.querySelectorAll("[data-second-home-link]").forEach(function (link) {
+      link.setAttribute("href", secondHomeUrls[language] || secondHomeUrls.en);
     });
     document.querySelectorAll("[placeholder], [aria-label], [title]").forEach(function (el) {
       ["placeholder", "aria-label", "title"].forEach(function (attribute) {

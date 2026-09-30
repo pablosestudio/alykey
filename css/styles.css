@@ -154,6 +154,19 @@ button { font: inherit; }
   min-width: 2.2em;
   padding: 0.25em 0.35em;
 }
+.lang-switch-link {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  color: var(--ink);
+  font-weight: 600;
+  min-width: 2.2em;
+  padding: 0.25em 0.35em;
+  text-align: center;
+  text-decoration: none;
+}
+.lang-switch-link:hover { background: var(--teal-tint); }
+.lang-switch-link[aria-current="page"] { color: var(--white); background: var(--teal); border-color: var(--teal); }
 .lang-switch button:hover { background: var(--teal-tint); }
 .lang-switch button[aria-current="true"] { color: var(--white); background: var(--teal); border-color: var(--teal); }
 .lang-switch button:disabled { color: var(--ink-faint); cursor: default; text-decoration: none; }
@@ -162,13 +175,13 @@ button { font: inherit; }
   .nav-actions { gap: 0.4rem; }
   .lang-switch { gap: 0; font-size: 0.78rem; }
   .lang-switch > span { display: none; }
-  .lang-switch button { min-width: 1.9em; padding: 0.25em 0.18em; }
+  .lang-switch button, .lang-switch-link { min-width: 1.9em; padding: 0.25em 0.18em; }
 }
 
 @media (max-width: 360px) {
   .wrap { padding-inline: 0.75rem; }
   .lang-switch { font-size: 0.72rem; }
-  .lang-switch button { min-width: 1.8em; padding-inline: 0.1em; }
+  .lang-switch button, .lang-switch-link { min-width: 1.8em; padding-inline: 0.1em; }
 }
 
 .menu-toggle {
