@@ -34,7 +34,9 @@
 
   function whatsappUrl() {
     var number = cfg.whatsappNumber || "";
-    var text = encodeURIComponent(cfg.whatsappMessage || "");
+    var language = document.documentElement.lang || "en";
+    var message = cfg.whatsappMessages && (cfg.whatsappMessages[language] || cfg.whatsappMessages.en) || "";
+    var text = encodeURIComponent(message);
     return "https://wa.me/" + number + (text ? "?text=" + text : "");
   }
 
@@ -57,11 +59,9 @@
     });
   }
 
-  /* ---- Contact form (front-end only for V1) ---------------------------
-     There is no backend yet. On submit we validate, then show a success
-     state. Before launch, point this at a real endpoint — see README.md
-     → "Before you publish" for options (Formspree, Getform, a small
-     serverless function, etc). */
+  /* ---- Contact form: prepare an email draft ---------------------------
+     There is no form backend yet. Never show a false submission success;
+     build a mailto draft and tell the visitor they must send it. */
   function initContactForm() {
     var form = document.querySelector("#contact-form");
     if (!form) return;
@@ -70,7 +70,12 @@
       var language = document.documentElement.lang || "en";
       var messages = {
         invalid: { en: "Please check the highlighted fields and try again.", es: "Revisa los campos marcados e inténtalo de nuevo.", fr: "Veuillez vérifier les champs signalés et réessayer.", uk: "Перевірте позначені поля та спробуйте ще раз." },
-        success: { en: "Thank you. We'll get back to you as soon as possible.", es: "Gracias. Te responderemos lo antes posible.", fr: "Merci. Nous vous répondrons dès que possible.", uk: "Дякуємо. Ми відповімо вам якомога швидше." }
+        draft: {
+          en: "Your email app should open with a draft. Review it and press Send; this website does not send the request automatically.",
+          es: "Se debería abrir tu aplicación de correo con un borrador. Revísalo y pulsa Enviar; la web no transmite la solicitud automáticamente.",
+          fr: "Votre application de messagerie devrait s'ouvrir avec un brouillon. Vérifiez-le puis cliquez sur Envoyer ; le site ne transmet pas automatiquement la demande.",
+          uk: "У вашій поштовій програмі має відкритися чернетка. Перевірте її та натисніть «Надіслати»; сайт не надсилає запит автоматично."
+        }
       };
       return messages[key][language] || messages[key].en;
     }
@@ -99,11 +104,22 @@
         return;
       }
 
-      // V1: no backend wired up yet. Replace this block once a form
-      // endpoint is connected (see README.md).
-      status.textContent = message("success");
-      status.classList.add("is-visible", "is-success");
-      form.reset();
+      var language = document.documentElement.lang || "en";
+      var labels = {
+        en: ["Name", "Email", "Phone", "Property location", "Service", "Preferred language", "Message"],
+        es: ["Nombre", "Correo", "Teléfono", "Ubicación de la vivienda", "Servicio", "Idioma preferido", "Mensaje"],
+        fr: ["Nom", "E-mail", "Téléphone", "Localisation du logement", "Service", "Langue préférée", "Message"],
+        uk: ["Ім'я", "Електронна пошта", "Телефон", "Розташування житла", "Послуга", "Бажана мова", "Повідомлення"]
+      }[language] || ["Name", "Email", "Phone", "Property location", "Service", "Preferred language", "Message"];
+      var fields = ["name", "email", "phone", "location", "need", "language", "message"];
+      var body = fields.map(function (field, index) {
+        var input = form.elements.namedItem(field);
+        return labels[index] + ": " + (input ? input.value.trim() : "");
+      }).join("\n");
+      var subjects = { en: "ALYKEY service enquiry", es: "Consulta sobre servicios de ALYKEY", fr: "Demande de renseignements sur ALYKEY", uk: "Запит щодо послуг ALYKEY" };
+      window.location.href = "mailto:" + (cfg.email || "hello@alykey.es") + "?subject=" + encodeURIComponent(subjects[language] || subjects.en) + "&body=" + encodeURIComponent(body);
+      status.textContent = message("draft");
+      status.classList.add("is-visible");
     });
   }
 
@@ -128,5 +144,11 @@
     initContactForm();
     setYear();
     prefillNeed();
+  });
+
+  document.addEventListener("alykey:languagechange", function () {
+    document.querySelectorAll("[data-config-whatsapp]").forEach(function (el) {
+      el.setAttribute("href", whatsappUrl());
+    });
   });
 })();

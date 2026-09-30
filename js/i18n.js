@@ -45,6 +45,18 @@
   Object.assign(dictionaries.es, { "Call": "Llamar" });
   Object.assign(dictionaries.fr, { "Call": "Appeler" });
   Object.assign(dictionaries.uk, { "Call": "Зателефонувати" });
+  Object.assign(dictionaries.es, {
+    "Continue by email": "Continuar por correo",
+    "This opens an email draft for you to review and send. The website does not transmit your request automatically.": "Esto abre un borrador de correo para que lo revises y envíes. La web no transmite tu solicitud automáticamente."
+  });
+  Object.assign(dictionaries.fr, {
+    "Continue by email": "Continuer par e-mail",
+    "This opens an email draft for you to review and send. The website does not transmit your request automatically.": "Un brouillon d'e-mail s'ouvrira pour vérification et envoi. Le site ne transmet pas votre demande automatiquement."
+  });
+  Object.assign(dictionaries.uk, {
+    "Continue by email": "Продовжити через електронну пошту",
+    "This opens an email draft for you to review and send. The website does not transmit your request automatically.": "Відкриється чернетка листа, щоб ви могли перевірити її та надіслати. Сайт не надсилає запит автоматично."
+  });
 
   Object.assign(dictionaries.es, {
     "Property care in Alicante,":"Cuidado de viviendas en Alicante,","even when you're away.":"aunque estés lejos.",
@@ -122,21 +134,24 @@
     "Explore property checks, keyholding, maintenance coordination and concierge services for homes in Alicante and the Costa Blanca.":"Descubre inspecciones, custodia de llaves, coordinación de mantenimiento y conserjería para viviendas en Alicante y la Costa Blanca.",
     "Book a one-off property inspection in Alicante: visual checks, photos and a clear report for your home in Spain, with no long-term plan.":"Solicita una inspección puntual en Alicante: revisión visual, fotos e informe claro para tu vivienda en España, sin contratar un plan periódico.",
     "Meet ALYKEY: personal property care, maintenance coordination and concierge for international homeowners in Alicante and the Costa Blanca.":"Conoce ALYKEY: cuidado personalizado, mantenimiento y conserjería para propietarios internacionales en Alicante y la Costa Blanca.",
-    "Contact ALYKEY about property management, a home inspection, maintenance or concierge in Alicante and the Costa Blanca.":"Contacta con ALYKEY para gestionar tu vivienda, solicitar una inspección o coordinar mantenimiento y conserjería en Alicante y la Costa Blanca."
+    "Contact ALYKEY about property management, a home inspection, maintenance or concierge in Alicante and the Costa Blanca.":"Contacta con ALYKEY para gestionar tu vivienda, solicitar una inspección o coordinar mantenimiento y conserjería en Alicante y la Costa Blanca.",
+    "Contact ALYKEY about property care, a home inspection, maintenance coordination or concierge in Alicante and the Costa Blanca.":"Contacta con ALYKEY sobre el cuidado de tu vivienda, una inspección, la coordinación de mantenimiento o conserjería en Alicante y la Costa Blanca."
   });
   Object.assign(metadata.fr, {
     "Property checks, home care, maintenance coordination and concierge in Alicante and the Costa Blanca for owners living abroad.":"Visites de contrôle, entretien immobilier, coordination de maintenance et conciergerie à Alicante et sur la Costa Blanca pour les propriétaires à l'étranger.",
     "Explore property checks, keyholding, maintenance coordination and concierge services for homes in Alicante and the Costa Blanca.":"Découvrez les visites de contrôle, la gestion des clés, la maintenance et la conciergerie pour les logements à Alicante et sur la Costa Blanca.",
     "Book a one-off property inspection in Alicante: visual checks, photos and a clear report for your home in Spain, with no long-term plan.":"Réservez une visite ponctuelle à Alicante : contrôle visuel, photos et rapport clair pour votre logement en Espagne, sans forfait longue durée.",
     "Meet ALYKEY: personal property care, maintenance coordination and concierge for international homeowners in Alicante and the Costa Blanca.":"Découvrez ALYKEY : entretien personnalisé, coordination de maintenance et conciergerie pour les propriétaires internationaux à Alicante et sur la Costa Blanca.",
-    "Contact ALYKEY about property management, a home inspection, maintenance or concierge in Alicante and the Costa Blanca.":"Contactez ALYKEY pour la gestion immobilière, une visite de contrôle, la maintenance ou la conciergerie à Alicante et sur la Costa Blanca."
+    "Contact ALYKEY about property management, a home inspection, maintenance or concierge in Alicante and the Costa Blanca.":"Contactez ALYKEY pour la gestion immobilière, une visite de contrôle, la maintenance ou la conciergerie à Alicante et sur la Costa Blanca.",
+    "Contact ALYKEY about property care, a home inspection, maintenance coordination or concierge in Alicante and the Costa Blanca.":"Contactez ALYKEY pour l'entretien de votre logement, une visite de contrôle, la coordination de maintenance ou la conciergerie à Alicante et sur la Costa Blanca."
   });
   Object.assign(metadata.uk, {
     "Property checks, home care, maintenance coordination and concierge in Alicante and the Costa Blanca for owners living abroad.":"Огляди, догляд за житлом, координація обслуговування та консьєрж-сервіс в Аліканте й на узбережжі Коста-Бланка для власників за кордоном.",
     "Explore property checks, keyholding, maintenance coordination and concierge services for homes in Alicante and the Costa Blanca.":"Огляди нерухомості, зберігання ключів, координація обслуговування та консьєрж-сервіс в Аліканте й на узбережжі Коста-Бланка.",
     "Book a one-off property inspection in Alicante: visual checks, photos and a clear report for your home in Spain, with no long-term plan.":"Замовте разовий огляд нерухомості в Аліканте: візуальна перевірка, фото та зрозумілий звіт про житло в Іспанії без довгострокового плану.",
     "Meet ALYKEY: personal property care, maintenance coordination and concierge for international homeowners in Alicante and the Costa Blanca.":"Знайомтеся з ALYKEY: персональний догляд за нерухомістю, координація обслуговування та консьєрж-сервіс для іноземних власників в Аліканте й на Коста-Бланці.",
-    "Contact ALYKEY about property management, a home inspection, maintenance or concierge in Alicante and the Costa Blanca.":"Зверніться до ALYKEY щодо управління нерухомістю, огляду житла, обслуговування чи консьєрж-сервісу в Аліканте й на узбережжі Коста-Бланка."
+    "Contact ALYKEY about property management, a home inspection, maintenance or concierge in Alicante and the Costa Blanca.":"Зверніться до ALYKEY щодо управління нерухомістю, огляду житла, обслуговування чи консьєрж-сервісу в Аліканте й на узбережжі Коста-Бланка.",
+    "Contact ALYKEY about property care, a home inspection, maintenance coordination or concierge in Alicante and the Costa Blanca.":"Зверніться до ALYKEY щодо догляду за житлом, огляду нерухомості, координації обслуговування чи консьєрж-сервісу в Аліканте й на узбережжі Коста-Бланка."
   });
 
   var english = {};
@@ -145,6 +160,8 @@
 
   var serviceTranslations = { es: {}, fr: {}, uk: {} };
   [
+    ["Property Care & Concierge", "Cuidado de viviendas y conserjería", "Entretien de logements et conciergerie", "Догляд за нерухомістю та консьєрж-сервіс"],
+    ["Property care, home checks and concierge for international homeowners in Alicante and the Costa Blanca.", "Cuidado de viviendas, inspecciones y conserjería para propietarios internacionales en Alicante y la Costa Blanca.", "Entretien de logements, visites de contrôle et conciergerie pour les propriétaires internationaux à Alicante et sur la Costa Blanca.", "Догляд за нерухомістю, огляди житла та консьєрж-сервіс для іноземних власників в Аліканте й на узбережжі Коста-Бланка."],
     ["/ month", "/ mes", "/ mois", "/ місяць"],
     ["Ask about Essential", "Preguntar por Essential", "Demander le forfait Essential", "Запитати про Essential"],
     ["Ask about Plus", "Preguntar por Plus", "Demander le forfait Plus", "Запитати про Plus"],
@@ -183,12 +200,13 @@
     ["A single visit and report. With a short video, €", "Una visita e informe. Con vídeo breve, €", "Une visite et un rapport. Avec une courte vidéo, €", "Один візит і звіт. Із коротким відео — €"],
     ["total.", "en total.", "au total.", "загалом."],
     ["Maintenance and repairs", "Mantenimiento y reparaciones", "Maintenance et réparations", "Обслуговування та ремонт"],
-    ["We arrange access and coordinate independent local professionals when work is needed at your property.", "Organizamos el acceso y coordinamos a profesionales locales independientes cuando tu vivienda necesita una intervención.", "Nous organisons l'accès et coordonnons des professionnels locaux indépendants lorsque votre logement nécessite une intervention.", "Ми організовуємо доступ і координуємо незалежних місцевих фахівців, коли нерухомості потрібні роботи."],
+    ["We arrange access and coordinate independent professionals who serve the area around your property.", "Organizamos el acceso y coordinamos a profesionales independientes que trabajan en la zona de tu vivienda.", "Nous organisons l'accès et coordonnons des professionnels indépendants intervenant dans le secteur de votre logement.", "Ми організовуємо доступ і координуємо незалежних фахівців, які працюють у районі вашого житла."],
     ["Plumbing, electrical and air-conditioning professionals", "Profesionales de fontanería, electricidad y aire acondicionado", "Plombiers, électriciens et techniciens en climatisation", "Фахівці із сантехніки, електрики та кондиціонування"],
     ["Cleaning, gardening and pool-care providers", "Servicios de limpieza, jardinería y cuidado de piscinas", "Prestataires de nettoyage, jardinage et entretien de piscine", "Послуги з прибирання, садівництва та догляду за басейном"],
     ["Repair and maintenance appointments", "Citas para reparaciones y mantenimiento", "Rendez-vous de réparation et de maintenance", "Організація ремонтних робіт і технічного обслуговування"],
     ["Access for a booked professional: €", "Apertura para un profesional concertado: €", "Accès pour un professionnel sur rendez-vous : €", "Доступ для запрошеного фахівця: €"],
     ["for up to 60 minutes", "hasta 60 minutos", "jusqu'à 60 minutes", "до 60 хвилин"],
+    ["Any additional time or coordination fee is quoted and approved before booking", "Cualquier tiempo adicional o coste de coordinación se presupuesta y aprueba antes de reservar", "Tout temps supplémentaire ou frais de coordination est chiffré et approuvé avant la réservation", "Будь-який додатковий час або плата за координацію погоджуються до бронювання"],
     ["We agree any coordination fee and the professional's quote with you first", "Acordamos contigo previamente el coste de coordinación y el presupuesto del profesional", "Nous convenons d'abord avec vous des frais de coordination et du devis du professionnel", "Ми заздалегідь узгоджуємо з вами вартість координації та кошторис фахівця"],
     ["Specialist work is carried out by independent professionals, not ALYKEY. Their labour and materials are separate from the access fee. We won't book chargeable work without your approval.", "Los trabajos especializados los realizan profesionales independientes, no ALYKEY. Su mano de obra y materiales se cobran aparte de la apertura. No encargamos trabajos con coste sin tu aprobación.", "Les travaux spécialisés sont réalisés par des professionnels indépendants, et non par ALYKEY. Leur main-d'œuvre et leurs matériaux s'ajoutent aux frais d'accès. Nous ne commandons aucun travail payant sans votre accord.", "Спеціалізовані роботи виконують незалежні фахівці, а не ALYKEY. Їхня робота та матеріали оплачуються окремо від послуги доступу. Без вашого дозволу ми не замовляємо платні роботи."],
     ["Practical help for your property", "Ayuda práctica para tu vivienda", "Une aide pratique pour votre logement", "Практична допомога з нерухомістю"],
@@ -196,9 +214,9 @@
     ["Prepare the property before your arrival", "Preparar la vivienda antes de tu llegada", "Préparer le logement avant votre arrivée", "Підготувати житло до вашого приїзду"],
     ["Receive a delivery or meet a booked professional", "Recibir una entrega o atender a un profesional concertado", "Réceptionner une livraison ou accueillir un professionnel sur rendez-vous", "Прийняти доставку або зустріти запрошеного фахівця"],
     ["Collect keys or arrange an authorised handover", "Recoger llaves u organizar una entrega autorizada", "Récupérer des clés ou organiser leur remise à une personne autorisée", "Забрати ключі або організувати їх передачу уповноваженій особі"],
-    ["Carry out agreed local errands or shopping", "Hacer recados o compras locales previamente acordados", "Effectuer des courses ou achats locaux convenus à l'avance", "Виконати узгоджені місцеві доручення або покупки"],
+    ["Carry out agreed errands or shopping in Alicante", "Hacer recados o compras acordados en Alicante", "Effectuer les courses ou achats convenus à Alicante", "Виконати узгоджені доручення або покупки в Аліканте"],
     ["Concierge assistance: €", "Asistencia de conserjería: €", "Assistance conciergerie : €", "Послуги консьєржа: €"],
-    ["per hour, one-hour minimum. Purchases and third-party services are charged separately, with your approval in advance.", "por hora, mínimo una hora. Las compras y los servicios de terceros se cobran aparte, previa aprobación.", "par heure, minimum une heure. Les achats et services tiers sont facturés séparément, après votre accord.", "за годину, мінімум одна година. Покупки та послуги сторонніх постачальників оплачуються окремо за попереднім погодженням."],
+    ["per hour, one-hour minimum. We agree any additional time and how it is billed before booking. Purchases and third-party services are charged separately, with your approval in advance.", "por hora, mínimo una hora. Acordamos cualquier tiempo adicional y cómo se factura antes de reservar. Las compras y los servicios de terceros se cobran aparte, previa aprobación.", "par heure, minimum une heure. Nous convenons avant réservation de tout temps supplémentaire et de sa facturation. Les achats et services tiers sont facturés séparément, après votre accord.", "за годину, мінімум одна година. Додатковий час і спосіб його оплати погоджуємо до бронювання. Покупки та послуги сторонніх постачальників оплачуються окремо за попереднім погодженням."],
     ["No unexpected work or charges", "Sin trabajos ni cargos inesperados", "Aucun travail ni frais imprévus", "Жодних неочікуваних робіт або платежів"],
     ["The prices shown are indicative totals, including applicable taxes, for standard properties in Alicante city. Before booking, we'll confirm the service, availability, any travel charge and the final total in writing. You approve every extra before we arrange it.", "Los precios indicados son importes totales orientativos, con los impuestos aplicables, para viviendas estándar en Alicante ciudad. Antes de reservar, confirmaremos por escrito el servicio, la disponibilidad, cualquier desplazamiento y el precio final. Aprobarás cada extra antes de que lo organicemos.", "Les tarifs affichés sont des montants totaux indicatifs, taxes applicables comprises, pour des logements standards dans la ville d'Alicante. Avant toute réservation, nous confirmerons par écrit le service, la disponibilité, les frais de déplacement éventuels et le prix final. Vous approuvez chaque supplément avant son organisation.", "Указані орієнтовні ціни є повною сумою з урахуванням застосовних податків для стандартного житла в місті Аліканте. До бронювання ми письмово підтвердимо послугу, доступність, можливу плату за виїзд і остаточну вартість. Кожну додаткову послугу узгоджуємо до її замовлення."],
     ["Property care plans & prices in Alicante | ALYKEY", "Planes y precios de cuidado de viviendas en Alicante | ALYKEY", "Forfaits et tarifs de suivi immobilier à Alicante | ALYKEY", "Плани та ціни на догляд за нерухомістю в Аліканте | ALYKEY"],
@@ -255,6 +273,7 @@
     var ogLocale = document.querySelector('meta[property="og:locale"]');
     if (ogLocale) ogLocale.content = { en: "en_GB", es: "es_ES", fr: "fr_FR", uk: "uk_UA" }[language] || "en_GB";
     try { localStorage.setItem("alykey-language", language); } catch (_) {}
+    document.dispatchEvent(new CustomEvent("alykey:languagechange", { detail: { language: language } }));
   }
 
   document.addEventListener("DOMContentLoaded", function () {

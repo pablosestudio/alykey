@@ -10,7 +10,12 @@ window.siteConfig = {
   phoneDisplay: "+34 620 255 933",   // Spanish mobile number
   phoneHref: "+34620255933",         // same number for tel: links
   whatsappNumber: "34620255933",     // country code first, digits only, no +
-  whatsappMessage: "Hi, I'd like to know more about ALYKEY property services.",
+  whatsappMessages: {
+    en: "Hi, I'd like to know more about ALYKEY property services.",
+    es: "Hola, me gustaría recibir información sobre los servicios de ALYKEY.",
+    fr: "Bonjour, je souhaiterais en savoir plus sur les services d'ALYKEY.",
+    uk: "Вітаю! Розкажіть, будь ласка, більше про послуги ALYKEY."
+  },
 
   prices: {
     propertyCheck: "43",
