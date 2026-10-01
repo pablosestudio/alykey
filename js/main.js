@@ -45,17 +45,47 @@
     var toggle = document.querySelector(".menu-toggle");
     var nav = document.querySelector(".mobile-nav");
     if (!toggle || !nav) return;
-    toggle.addEventListener("click", function () {
-      var isOpen = nav.classList.toggle("is-open");
+    var menuLabels = {
+      en: ["Open menu", "Close menu"],
+      es: ["Abrir menú", "Cerrar menú"],
+      fr: ["Ouvrir le menu", "Fermer le menu"],
+      uk: ["Відкрити меню", "Закрити меню"]
+    };
+
+    function setMenuOpen(isOpen) {
+      nav.classList.toggle("is-open", isOpen);
       toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
-      document.body.style.overflow = isOpen ? "hidden" : "";
+      var labels = menuLabels[document.documentElement.lang] || menuLabels.en;
+      toggle.setAttribute("aria-label", labels[isOpen ? 1 : 0]);
+      document.body.classList.toggle("menu-open", isOpen);
+    }
+
+    toggle.addEventListener("click", function () {
+      setMenuOpen(toggle.getAttribute("aria-expanded") !== "true");
     });
+
     nav.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
-        nav.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
-        document.body.style.overflow = "";
+        setMenuOpen(false);
       });
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") {
+        setMenuOpen(false);
+        toggle.focus();
+      }
+    });
+
+    document.addEventListener("pointerdown", function (event) {
+      if (toggle.getAttribute("aria-expanded") === "true" && !nav.contains(event.target) && !toggle.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    });
+
+    window.addEventListener("pageshow", function () { setMenuOpen(false); });
+    window.addEventListener("resize", function () {
+      if (window.matchMedia("(min-width: 900px)").matches) setMenuOpen(false);
     });
   }
 

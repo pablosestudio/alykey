@@ -2,7 +2,7 @@
  * ALYKEY — central content config
  * -------------------------------------------------------------
  * Edit the values below to update phone, WhatsApp, email and prices
- * across every page — nothing else in the site needs to change.
+ * across pages that use the shared configuration.
  * See README.md → "Editing content" for details.
  */
 window.siteConfig = {
@@ -18,13 +18,19 @@ window.siteConfig = {
   },
 
   prices: {
-    propertyCheck: "43",
-    propertyCheckVideo: "48",
-    basic: "59",
-    care: "109",
-    weekly: "219",
-    access: "30",
-    concierge: "35"
+    keyholding: "19",
+    keyholdingAnnual: "190",
+    propertyCheck: "39",
+    propertyCheckVideo: "45",
+    basic: "49",
+    care: "89",
+    weekly: "159",
+    weekly52: "172",
+    access: "25",
+    accessExtraHour: "20",
+    concierge: "30",
+    emergencyDay: "45",
+    emergencyNight: "60"
   },
 
   company: {

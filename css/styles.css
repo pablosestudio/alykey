@@ -186,6 +186,12 @@ button { font: inherit; }
 
 .menu-toggle {
   display: inline-flex;
+  position: relative;
+  z-index: 41;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
   background: none;
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
@@ -201,12 +207,17 @@ button { font: inherit; }
   display: none;
   position: fixed;
   inset: 76px 0 0 0;
+  max-height: calc(100vh - 76px);
+  max-height: calc(100dvh - 76px);
   background: var(--bg);
   z-index: 39;
   padding: var(--space-3);
   overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 .mobile-nav.is-open { display: block; }
+body.menu-open { overflow: hidden; }
 .mobile-nav a {
   display: block;
   padding: 0.9em 0;
@@ -412,8 +423,13 @@ button { font: inherit; }
 
 @media (min-width: 900px) {
   .price-grid { grid-template-columns: repeat(4, 1fr); }
-  .price-grid--plans { grid-template-columns: repeat(3, 1fr); }
+  .price-grid--plans { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+.faq-list { display: grid; gap: 0.75rem; margin-top: var(--space-4); }
+.faq-list details { padding: 1.1rem 1.25rem; border: 1px solid var(--line); background: var(--panel); }
+.faq-list summary { color: var(--ink); font-weight: 600; cursor: pointer; }
+.faq-list details p { max-width: 78ch; margin: 0.8rem 0 0; color: var(--ink-soft); }
 
 /* ---- Property check checklist ------------------------------------------- */
 

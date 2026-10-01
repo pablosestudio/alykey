@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
-<link rel="stylesheet" href="css/styles.css?v=5">
+<link rel="stylesheet" href="css/styles.css?v=7">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -31,7 +31,7 @@
     <div class="nav-actions">
       <div class="lang-switch"><button type="button" data-language="en">EN</button><span aria-hidden="true">·</span><button type="button" data-language="es">ES</button><span aria-hidden="true">·</span><button type="button" data-language="fr">FR</button><span aria-hidden="true">·</span><button type="button" data-language="uk">UA</button></div>
       <a class="btn btn-primary" href="contact.html">Get in touch</a>
-      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"><span></span></button>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav"><span></span></button>
     </div>
   </div>
   <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
@@ -50,122 +50,151 @@
     <div class="wrap">
       <p class="kicker">Property Care &amp; Concierge</p>
       <h1 class="h1" style="font-size:clamp(2.1rem,3.2vw + 1rem,3rem);">Property care plans and prices in Alicante.</h1>
-      <p class="lede">Choose a one-off home check, regular visits while you're away, or practical help when your property needs attention. We confirm the scope and total price before any work begins.</p>
-      <p class="note"><a data-second-home-link href="property-care-second-homes-alicante.html">See how ALYKEY helps care for a second home in Alicante →</a></p>
+      <p class="lede">Reliable keyholding, regular home checks and practical help for your second home on the Costa Blanca. Every plan is explained clearly, with a digital photo report within 24 hours of each included visit.</p>
     </div>
   </div>
 
   <section class="section">
     <div class="wrap">
-      <p class="eyebrow">ALYKEY HOME</p>
-      <h2 class="h2">Regular property care</h2>
-      <p class="lede">Scheduled visits, visual checks and a clear photo update after every visit, while you're away.</p>
+      <p class="eyebrow">MONTHLY PLANS</p>
+      <h2 class="h2">Choose the level of care that suits your home</h2>
+      <p class="lede">Every plan that includes visits comes with secure custody of one set of keys and a digital report with photos within 24 hours after each visit. Custodia Base includes no inspection visits or visit reports.</p>
       <div class="price-grid price-grid--plans">
         <article class="price-card">
-          <p class="name">Essential</p>
-          <p class="amount">€<span data-config="prices.basic">59</span> <small>/ month</small></p>
-          <p class="desc">One scheduled visit each month, up to 30 minutes.</p>
+          <p class="name">Custodia Base</p>
+          <p class="amount">€<span data-config="prices.keyholding">19</span> <small>/ month</small></p>
+          <p class="desc">Secure keyholding and priority access to help when you need it. Annual payment: €<span data-config="prices.keyholdingAnnual">190</span>.</p>
           <ul class="check-list">
-            <li>Visual check of doors, windows and the general condition</li>
-            <li>Look for visible signs of leaks or damp</li>
-            <li>Ventilation where authorised and safe</li>
-            <li>Up to 10 photos and a written update within 24 hours</li>
-            <li>Keyholding for one authorised set of keys</li>
+            <li>Secure custody of one set of keys in a security safe</li>
+            <li>Key availability for you or visitors you authorise</li>
+            <li>Priority attention for emergency call-outs or on-demand services</li>
+            <li>No scheduled inspection visits or visual checks included</li>
           </ul>
-          <a class="btn btn-primary btn-block" href="contact.html?need=Regular%20Property%20Care">Ask about Essential</a>
+          <a class="btn btn-primary btn-block" href="contact.html?need=Custodia%20Base">Contract this plan</a>
+        </article>
+        <article class="price-card">
+          <p class="name">Essential</p>
+          <p class="amount">€<span data-config="prices.basic">49</span> <small>/ month</small></p>
+          <p class="desc">One home check each month, lasting 30–45 minutes.</p>
+          <ul class="check-list">
+            <li>Secure custody of one set of keys</li>
+            <li>Visual check of doors, windows and access points</li>
+            <li>Look for visible signs of leaks, damp, mould or pests</li>
+            <li>Run taps and flush toilets to refresh water; ventilate when safe</li>
+            <li>Digital report within 24 hours, with up to 12 photos</li>
+          </ul>
+          <a class="btn btn-primary btn-block" href="contact.html?need=Essential">Contract this plan</a>
         </article>
         <article class="price-card is-featured">
           <p class="name">Plus</p>
-          <p class="amount">€<span data-config="prices.care">109</span> <small>/ month</small></p>
-          <p class="desc">Two scheduled visits each month, up to 30 minutes per visit.</p>
+          <p class="amount">€<span data-config="prices.care">89</span> <small>/ month</small></p>
+          <p class="desc">Two home checks each month, roughly one every 15 days; 30–45 minutes each.</p>
           <ul class="check-list">
-            <li>Everything included in Essential</li>
-            <li>Two check-ins to spot visible issues sooner</li>
-            <li>Up to 10 photos and a written update after each visit</li>
-            <li>Keyholding for one authorised set of keys</li>
+            <li>Secure custody of one set of keys</li>
+            <li>Everything included in Essential, on both visits</li>
+            <li>Digital report within 24 hours after each visit</li>
+            <li>Up to 12 photos with each report</li>
           </ul>
-          <a class="btn btn-primary btn-block" href="contact.html?need=Regular%20Property%20Care">Ask about Plus</a>
+          <a class="btn btn-primary btn-block" href="contact.html?need=Plus">Contract this plan</a>
         </article>
         <article class="price-card">
           <p class="name">Weekly</p>
-          <p class="amount">€<span data-config="prices.weekly">219</span> <small>/ month</small></p>
-          <p class="desc">Four scheduled visits per month, up to 30 minutes per visit.</p>
+          <p class="amount">€<span data-config="prices.weekly">159</span> <small>/ month</small></p>
+          <p class="desc">Four home checks per month, usually one each week; 30–45 minutes each.</p>
           <ul class="check-list">
-            <li>Everything included in Essential</li>
-            <li>Weekly visual check-ins</li>
-            <li>Up to 10 photos and a written update after each visit</li>
-            <li>Keyholding for one authorised set of keys</li>
+            <li>Secure custody of one set of keys</li>
+            <li>Everything included in Plus, with weekly checks</li>
+            <li>Closer visual monitoring for leaks and damp</li>
+            <li>Ventilation and running taps to refresh water</li>
+            <li>Digital report with photos within 24 hours after every visit</li>
           </ul>
-          <a class="btn btn-primary btn-block" href="contact.html?need=Regular%20Property%20Care">Ask about Weekly</a>
+          <a class="btn btn-primary btn-block" href="contact.html?need=Weekly">Contract this plan</a>
         </article>
       </div>
-      <p class="note">Visits are visual checks, not technical surveys or a guarantee that hidden faults will be detected. The plans are priced for properties in Alicante city. We confirm availability and any travel charge for other areas before booking.</p>
+      <p class="note">Weekly includes four visits per month (48 per year). Continuous coverage for 52 weeks is available for €<span data-config="prices.weekly52">172</span> per month. All checks are visual, not technical surveys, and cannot guarantee detection of hidden faults. Key custody follows a documented receipt and coded-key protocol. We do not publish or disclose key-identifying details.</p>
     </div>
   </section>
 
   <section class="section section--alt">
     <div class="wrap">
-      <p class="eyebrow">ONE-OFF SERVICE</p>
-      <h2 class="h2">A single property check</h2>
-      <p class="lede">A useful first step if you don't need monthly visits.</p>
-      <div class="check-grid">
-        <div>
-          <ul class="check-list">
-            <li>One visit of up to 45 minutes</li>
-            <li>Visual checklist covering doors, windows and visible signs of leaks or damp</li>
-            <li>Up to 15 photos and a written report within 48 hours</li>
-            <li>Optional short video included in the video version</li>
-          </ul>
-          <p class="note">A visual check is not a survey, expert diagnosis or substitute for a qualified tradesperson.</p>
-        </div>
-        <article class="price-card is-featured">
+      <p class="eyebrow">ONE-OFF &amp; ON-DEMAND SERVICES</p>
+      <h2 class="h2">Help when you need a specific task</h2>
+      <div class="price-grid price-grid--plans">
+        <article class="price-card">
           <p class="name">Property Check</p>
-          <p class="amount">From €<span data-config="prices.propertyCheck">43</span> <small>/ one-off</small></p>
-          <p class="desc">A single visit and report. With a short video, €<span data-config="prices.propertyCheckVideo">48</span> total.</p>
-          <a class="btn btn-primary btn-block" href="property-check.html">See the full checklist</a>
+          <p class="amount">€<span data-config="prices.propertyCheck">39</span> <small>without video</small></p>
+          <p class="desc">€<span data-config="prices.propertyCheckVideo">45</span> with video. One visit of up to 45 minutes.</p>
+          <ul class="check-list">
+            <li>Visual checklist covering water, electricity, doors, windows and visible security conditions</li>
+            <li>Check for visible signs of damp or leaks; receive recommendations if something needs attention</li>
+            <li>Written report and up to 15 photos within 24 hours</li>
+            <li>Video option includes a 1–2 minute walkthrough</li>
+          </ul>
+          <a class="btn btn-primary btn-block" href="contact.html?need=Property%20Check">Request this service</a>
         </article>
+        <article class="price-card">
+          <p class="name">Access for a Professional</p>
+          <p class="amount">€<span data-config="prices.access">25</span> <small>/ up to 60 minutes</small></p>
+          <p class="desc">We meet the booked technician, supplier or delivery, open up, wait and secure the home after the appointment.</p>
+          <ul class="check-list">
+            <li>Passive attendance and waiting during the agreed time slot</li>
+            <li>Confirmation when the visit starts and ends</li>
+            <li>Extra time: €20 per additional hour</li>
+            <li>Does not include technical supervision or active errands</li>
+          </ul>
+          <a class="btn btn-primary btn-block" href="contact.html?need=Professional%20Access">Request this service</a>
+        </article>
+        <article class="price-card">
+          <p class="name">Personal Concierge &amp; Errands</p>
+          <p class="amount">€<span data-config="prices.concierge">30</span> <small>/ hour · 1-hour minimum</small></p>
+          <p class="desc">Active help preparing your home or handling agreed local tasks.</p>
+          <ul class="check-list">
+            <li>Prepare the home before your arrival: ventilation or climate control</li>
+            <li>Basic shopping, errands and agreed administrative tasks</li>
+            <li>Receive deliveries and coordinate agreed local tasks</li>
+            <li>Active coordination of repairs or renovation visits</li>
+            <li>Purchases, materials and third-party invoices are extra, with prior approval</li>
+          </ul>
+          <a class="btn btn-primary btn-block" href="contact.html?need=Concierge">Request this service</a>
+        </article>
+        <article class="price-card is-featured">
+          <p class="name">24/7 Emergency Call-out</p>
+          <p class="amount">€<span data-config="prices.emergencyDay">45</span> <small>weekday, 08:00–20:00 · up to 45 minutes</small></p>
+          <p class="desc">€<span data-config="prices.emergencyNight">60</span> at night, on weekends or public holidays · up to 45 minutes. For active keyholding clients only.</p>
+          <ul class="check-list">
+            <li>Urgent dispatch for alarm alerts, reported leaks, storm damage or serious incidents</li>
+            <li>Initial visual check and, when safe and authorised, steps such as shutting off the mains water or isolating power</li>
+            <li>Each call-out includes up to 45 minutes on site</li>
+            <li>Urgent update with photos or video and recommended next action</li>
+            <li>Repairs and third-party work are quoted separately and need your approval</li>
+          </ul>
+          <a class="btn btn-primary btn-block" href="contact.html?need=Emergency%20Call-out">Ask about emergency cover</a>
+        </article>
+      </div>
+      <div class="check-grid" style="margin-top:2rem;">
+        <div>
+          <h3>How do we enter if you do not have key custody with ALYKEY?</h3>
+          <p>For a Property Check, arrange access in advance through a smart lock or key safe code, an authorised handover at your development's concierge, or by having you, a family member or tenant open the door. We will confirm the access method before booking. If a key must be collected or returned at another address, a €15–€20 travel supplement may apply and will be agreed beforehand.</p>
+        </div>
+        <div>
+          <h3>What each price covers</h3>
+          <p>Prices are indicative totals, including applicable taxes, for standard homes in Alicante city. We confirm availability, service scope, any travel charge and the final price in writing before booking. Independent professionals set their own fees; their labour and materials are separate. No paid extra is arranged without your approval.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="section">
     <div class="wrap">
-      <p class="eyebrow">ALYKEY SERVICES</p>
-      <h2 class="h2">Maintenance and repairs</h2>
-      <p class="lede">We arrange access and coordinate independent professionals who serve the area around your property.</p>
-      <div class="check-grid">
-        <ul class="check-list">
-          <li>Plumbing, electrical and air-conditioning professionals</li>
-          <li>Cleaning, gardening and pool-care providers</li>
-          <li>Repair and maintenance appointments</li>
-          <li>Access for a booked professional: €<span data-config="prices.access">30</span> for up to 60 minutes</li>
-          <li>Any additional time or coordination fee is quoted and approved before booking</li>
-          <li>We agree any coordination fee and the professional's quote with you first</li>
-        </ul>
-        <div>
-          <p>Specialist work is carried out by independent professionals, not ALYKEY. Their labour and materials are separate from the access fee. We won't book chargeable work without your approval.</p>
-          <a class="btn btn-primary" href="contact.html?need=Maintenance">Request a quote</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--alt">
-    <div class="wrap">
-      <p class="eyebrow">ALYKEY CONCIERGE</p>
-      <h2 class="h2">Practical help for your property</h2>
-      <p class="lede">Tell us what needs organising before you arrive or while you're away.</p>
-      <div class="check-grid">
-        <ul class="check-list">
-          <li>Prepare the property before your arrival</li>
-          <li>Receive a delivery or meet a booked professional</li>
-          <li>Collect keys or arrange an authorised handover</li>
-          <li>Carry out agreed errands or shopping in Alicante</li>
-        </ul>
-        <div>
-          <p>Concierge assistance: €<span data-config="prices.concierge">35</span> per hour, one-hour minimum. We agree any additional time and how it is billed before booking. Purchases and third-party services are charged separately, with your approval in advance.</p>
-          <a class="btn btn-primary" href="contact.html?need=Something%20else">Tell us what you need</a>
-        </div>
+      <p class="eyebrow">FREQUENTLY ASKED QUESTIONS</p>
+      <h2 class="h2">Clear answers before you book</h2>
+      <div class="faq-list">
+        <details><summary>When will I receive the report?</summary><p>For every visit included in Essential, Plus or Weekly, we send a digital report with photos within 24 hours. Property Check reports are also delivered within 24 hours. Custodia Base has no scheduled inspection visits, so it does not include periodic visit reports.</p></details>
+        <details><summary>Can you check my property if ALYKEY does not hold my keys?</summary><p>Yes. Before a Property Check, we agree a safe access method: a temporary smart-lock code, a key safe, an authorised key handover through the development concierge, or an owner, relative or tenant letting us in. We do not enter until access has been agreed.</p></details>
+        <details><summary>What is the difference between four visits per month and weekly cover?</summary><p>The Weekly plan at €159 includes four visits per month, or 48 visits per year. If you need a visit in every one of the 52 weeks, the continuous-cover option is €172 per month.</p></details>
+        <details><summary>Are repairs and materials included in the plans?</summary><p>No. The plans cover the listed visits and visual checks. Repairs, specialist work, materials and third-party services are quoted separately and only arranged after you approve them.</p></details>
+        <details><summary>Is a home check a technical inspection?</summary><p>No. Checks are visual and report what can be seen during the visit. They are not a technical survey or a professional diagnosis and cannot guarantee detection of hidden defects.</p></details>
+        <details><summary>How do I start a plan or request a service?</summary><p>Use the button on the plan or service you want and send us your details. We will confirm availability, access arrangements, scope and price before the service begins. A request through this website is not an online payment.</p></details>
       </div>
     </div>
   </section>
@@ -173,8 +202,8 @@
   <section class="section section--alt">
     <div class="wrap">
       <p class="eyebrow">CLEAR PRICING</p>
-      <h2 class="h2">No unexpected work or charges</h2>
-      <p class="lede">The prices shown are indicative totals, including applicable taxes, for standard properties in Alicante city. Before booking, we'll confirm the service, availability, any travel charge and the final total in writing. You approve every extra before we arrange it.</p>
+      <h2 class="h2">Your home looked after, with clear communication</h2>
+      <p class="lede">We confirm the service, access plan and total price before starting. You receive a written update after each included visit, and every extra cost needs your approval.</p>
     </div>
   </section>
 
@@ -228,8 +257,8 @@
   WhatsApp us
 </a>
 
-<script src="js/content.js?v=4"></script>
-<script src="js/i18n.js?v=9"></script>
-<script src="js/main.js?v=2"></script>
+<script src="js/content.js?v=6"></script>
+<script src="js/i18n.js?v=11"></script>
+<script src="js/main.js?v=3"></script>
 </body>
 </html>
