@@ -206,7 +206,14 @@ button { font: inherit; }
 .mobile-nav {
   display: none;
   position: fixed;
-  inset: 76px 0 0 0;
+  /* The sticky, blurred header establishes the fixed-position containing
+     block. Give the panel an explicit viewport-sized area below the header
+     instead of relying on bottom: 0, which would clip it to the header. */
+  top: 76px;
+  right: 0;
+  left: 0;
+  height: calc(100vh - 76px);
+  height: calc(100dvh - 76px);
   max-height: calc(100vh - 76px);
   max-height: calc(100dvh - 76px);
   background: var(--bg);

@@ -358,7 +358,14 @@
     document.querySelectorAll("[placeholder], [aria-label], [title]").forEach(function (el) {
       ["placeholder", "aria-label", "title"].forEach(function (attribute) {
         if (!el.hasAttribute(attribute)) return;
-        var dataKey = "i18n" + attribute.charAt(0).toUpperCase() + attribute.slice(1);
+        // DOMStringMap only accepts camel-cased dataset names. Keeping the
+        // hyphen from aria-label here throws a SyntaxError and aborts the
+        // remaining DOMContentLoaded handlers (including mobile navigation).
+        var dataKey = "i18n" + attribute.replace(/-([a-z])/g, function (_, letter) {
+          return letter.toUpperCase();
+        }).replace(/^([a-z])/, function (_, letter) {
+          return letter.toUpperCase();
+        });
         if (!el.dataset[dataKey]) el.dataset[dataKey] = el.getAttribute(attribute);
         var source = el.dataset[dataKey];
         el.setAttribute(attribute, dictionary[source] || source);
