@@ -25,9 +25,7 @@ window.siteConfig = {
     basic: "49",
     care: "89",
     weekly: "159",
-    weekly52: "172",
     access: "25",
-    accessExtraHour: "20",
     concierge: "30",
     emergencyDay: "45",
     emergencyNight: "60"
