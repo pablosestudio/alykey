@@ -1,6 +1,6 @@
 # Auditoría SEO de ALYKEY
 
-**Revisión:** 6 de octubre de 2026  
+**Revisión:** 7 de octubre de 2026
 **Cobertura:** web estática publicada en GitHub Pages, cinco páginas comerciales, páginas de apoyo, cuatro landings localizadas, sitemap, robots, contenido, idiomas y conversión.
 
 ## Diagnóstico
@@ -54,3 +54,20 @@ Google recomienda páginas localizadas separadas y `hreflang` recíproco, ademá
 - No añadir marcado `LocalBusiness` que exija una dirección ni ratings/reviews ficticias. Google documenta los datos de organización y negocio local por separado: [Organization](https://developers.google.com/search/docs/appearance/structured-data/organization), [LocalBusiness](https://developers.google.com/search/docs/appearance/structured-data/local-business).
 - Las visitas se describen como comprobaciones visuales, no inspecciones técnicas ni garantía de detección de fallos ocultos.
 - SEO es acumulativo: publicación e indexación no implican posiciones concretas ni un plazo garantizado.
+
+## Segunda revisión y mejoras aplicadas (7 de octubre de 2026)
+
+- **Precio de entrada coherente.** Las cuatro páginas de cuidado de segunda residencia indicaban planes desde 49 €/mes, aunque Custodia Base cuesta 19 €/mes o 190 €/año. Ahora se comunica por separado la custodia sin visitas y los planes que sí incluyen visitas. También se explica que Custodia Base no incluye inspecciones ni informes de visita.
+- **Enlazado interno por idioma.** Las portadas ES/FR/UK enlazaban a la landing inglesa de segunda residencia. Ahora cada una apunta a su contenido localizado. Las páginas de tarifas también enlazan a la landing correspondiente, con texto ancla descriptivo. Es importante que los enlaces se puedan rastrear como enlaces HTML normales: [guía oficial de enlaces rastreables](https://developers.google.com/search/docs/crawling-indexing/links-crawlable).
+- **Correcciones editoriales.** Se corrigió una repetición en la duración de visita de la página española y se aclaró que los 30–45 minutos aplican a cada visita programada, no al mes.
+- **Competencia y posicionamiento.** La página de KeyNido consultada publica 19 €/mes por custodia, 59 € por una visita y 99 € por dos; Costakey-Holding comunica un servicio mensual desde 45 € con custodia e informe. ALYKEY queda por debajo en Essential y Plus, pero Weekly (159 €/mes) no es el plan mensual más barato; debe defender su valor explicando que incluye cuatro visitas mensuales (no 52 al año). Referencias: [KeyNido](https://keynido.com/) y [Costakey-Holding](https://www.costakey-holding.com/). Los precios de terceros pueden cambiar; comprobarlos periódicamente.
+- **Contenido útil frente a páginas creadas solo para buscadores.** Mantener información específica, alcance exacto y experiencia real verificable en cada idioma. Google prioriza contenido útil para personas; ampliar con protocolo real de visita, ejemplos autorizados de informes y fotos originales, no con texto repetido ni promesas no demostrables: [contenido útil y centrado en las personas](https://developers.google.com/search/docs/fundamentals/creating-helpful-content).
+- **Medición pendiente.** No hay acceso a Search Console/Analytics ni datos reales de impresiones, posiciones, indexación elegida por Google, leads o Core Web Vitals. El intento de PageSpeed Insights no produjo medición porque la API respondió límite de cuota (429); no se atribuye ninguna puntuación ni mejora de rendimiento sin una prueba válida.
+
+### Próximas acciones con mayor impacto
+
+1. Configurar el dominio definitivo `alykey.es` y Search Console; verificar propiedad, sitemap, canonicals e indexación por idioma. El dominio actual de GitHub Pages debe seguir siendo canónico hasta que el dominio propio resuelva y sirva HTTPS correctamente.
+2. Completar las páginas legales con la identidad y domicilio legal que correspondan antes de captar clientes; no inventar CIF, dirección, certificaciones ni reseñas.
+3. Recopilar pruebas reales de confianza: fotos propias de visitas, protocolo de custodia, ejemplo anonimizado del informe y reseñas auténticas con permiso.
+4. Medir rendimiento móvil con PageSpeed Insights o Lighthouse y Core Web Vitals en Search Console/CrUX cuando haya datos suficientes; priorizar LCP, INP y CLS con mediciones, no suposiciones.
+5. Revisar conversiones: el formulario prepara un correo en el dispositivo del usuario y no envía una solicitud automáticamente; medir si ese paso reduce contactos y evaluar una alternativa con privacidad y consentimiento adecuados.
