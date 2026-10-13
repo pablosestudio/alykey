@@ -33,7 +33,7 @@ window.siteConfig = {
 
   company: {
     legalName: "ALYKEY",
-    address: "[REGISTERED ADDRESS]"
+    address: "Av. de Benidorm, 17, entresuelo derecha, 03550 Sant Joan d’Alacant, Alicante, España"
   },
 
   social: {
